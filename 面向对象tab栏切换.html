@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+    <style type="text/css">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+     #tab{
+       width: 800px;
+       height: 400px;
+       border: 1px solid black;
+     }
+     .header{
+       min-height: 41px;
+       border-bottom: 1px solid black;
+     }
+     .header li {
+       position: relative;
+       overflow: hidden;
+       z-index: 1;
+       width: 100px;
+       height: 41px;
+       line-height: 40px;
+       text-align: center;
+       border-right: 1px solid black;
+       border-bottom: 1px solid black;
+       margin-bottom: -1px;
+       list-style: none;
+       float: left;
+     }
+     .liactive {
+       background-color: pink;
+     }
+     .content section {
+       display: none;
+     }
+     .conactive {
+       display: block!important;
+     }
+     .close {
+       cursor: pointer;
+       position: absolute;
+       right: -5px;
+       top:-5px;
+       font-size: 10px;
+       line-height: 14px;
+       text-align: center;
+       color: #fff;
+       width: 15px;
+       height: 15px;border-radius: 50%;background-color: black;
+     }
+     .add {
+       width: 20px;
+       height: 20px;
+       float: right;
+       margin: 10px 10px 0 0;
+     }
+     .clearfix:after{
+         content:""; /*内容就是一个英文.*/
+         display:block; /*加入的这个元素转化为块级元素*/
+         clear: both; /*清除左右两边的浮动*/
+     }
+     .heardInput {
+       width: 70px;
+       height: 25px;
+     }
+    </style>
+	</head>
+	<body>
+    <h1>Js面向对象 动态添加标签页</h1>
+    <div id="tab">
+        <ul class="header clearfix">
+          <li class="liactive"><div class="close">x</div><span>test 1</span></li>
+           <li><div class="close">x</div><span>test 2</span></li>
+            <li><div class="close">x</div><span>test 3</span></li>
+            <button type="button" class="add">+</button>
+        </ul>
+      <div class="content">
+        <section class="conactive">测试1</section>
+         <section>测试2</section>
+          <section>测试3</section>
+      </div>
+    </div>
+	</body>
+  <script src="面向对象tab切换.js" type="text/javascript" charset="utf-8"></script>
+</html>
